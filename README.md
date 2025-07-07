@@ -85,11 +85,12 @@ This project is a real-time streaming pipeline for detecting frudulent transacti
    - `geolocation_alerts` on clickhouse table `geolocation_alerts`
    - `device_alerts` on clickhouse table `device_alerts`
    - `velocity_alerts` on clickhouse table `velocity_alerts`
-   we need json configuration file connector for each topic that sink to clickhouse and you can check all file in `./connector-configurations/` and you can run all configuration file with postman or with command
+   we need json configuration file connector for each topic that sink to clickhouse and you can check all file in `./connector-configurations/` and then you can run all configuration file with postman or with command
 ```bash
 curl -X POST http://localhost:8083/connectors \
      -H "Content-Type: application/json" \
      -d @transactions.json
 ```
+9. After that make sure the data already available in table clickhouse. and the next step is make dashbord in grafana. in grafana you can add data source clickhouse and make visualization dashbord in there 
 
    
