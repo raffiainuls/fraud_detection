@@ -91,6 +91,11 @@ curl -X POST http://localhost:8083/connectors \
      -H "Content-Type: application/json" \
      -d @transactions.json
 ```
-9. After that make sure the data already available in table clickhouse. and the next step is make dashbord in grafana. in grafana you can add data source clickhouse and make visualization dashbord in there 
+9. After that make sure the data already available in table clickhouse. and the next step is make dashbord in grafana. in grafana you can add data source clickhouse and make visualization dashbord in there
+10. and in bellow the demo from user input transaction fraud big amount and the data streaming in dashbord grafana
+
+https://github.com/user-attachments/assets/0b860d8c-c39f-48a2-ae39-55665df90c9c
+
+
 
    
