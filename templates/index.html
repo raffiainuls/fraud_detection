@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #c3e6cb;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Transaction Form</h2>
+        <form action="/" method="POST">
+            <label for="customer_id">Customer ID</label>
+            <input type="text" id="customer_id" name="customer_id">
+
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount">
+
+            <label for="merchant">Merchant</label>
+            <select id="merchant" name="merchant">
+                <option value="Tokopedia">Tokopedia</option>
+                <option value="Shopee">Shopee</option>
+                <option value="Alfamart">Alfamart</option>
+                <option value="Indomaret">Indomaret</option>
+                <option value="Bukalapak">Bukalapak</option>
+            </select>
+
+            <label for="location">Location</label>
+            <select id="location" name="location">
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Cimahi">Cimahi</option>
+                <option value="Depok">Depok</option>
+                <option value="Bogor">Bogor</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Malang">Malang</option>
+                <option value="Semarang">Semarang</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+            </select>
+
+           <label for="payment_method">Payment Method</label>
+            <select id="payment_method" name="payment_method">
+                <option value="Debit Card">Debit Card</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="E-Wallet">E-Wallet</option>
+                <option value="Q-ris">Q-ris</option>
+            </select>
+
+            <label for="device_id">Device ID</label>
+            <input type="text" id="device_id" name="device_id">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+{% if success %}
+<script>alert("✔️ Transaction sent successfully!");</script>
+{% endif %}
+</body>
+</html>
